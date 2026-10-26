@@ -80,12 +80,8 @@ from urllib.parse import unquote
 # -- Dependency checks --------------------------------------------------------
 try:
     import pandas as pd
-    from jobspy import scrape_jobs
-except ImportError as exc:
-    print(
-        f"ERROR: Missing required package: {exc.name}.\n"
-        "Run: pip install python-jobspy pandas"
-    )
+except ImportError:
+    print("ERROR: Missing required package: pandas.\nRun: pip install pandas")
     raise SystemExit(1)
 
 try:
